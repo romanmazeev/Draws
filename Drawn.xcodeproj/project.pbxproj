@@ -7,23 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30121E87244BF0300032E073 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30121E86244BF0300032E073 /* CanvasView.swift */; };
+		30122142244CFA600032E073 /* DrawnClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30121E89244CFA5E0032E073 /* DrawnClassifier.mlmodel */; };
 		309D8EE6244A740E00FAA940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE5244A740E00FAA940 /* AppDelegate.swift */; };
 		309D8EE8244A740E00FAA940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE7244A740E00FAA940 /* SceneDelegate.swift */; };
 		309D8EEA244A740E00FAA940 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE9244A740E00FAA940 /* ContentView.swift */; };
 		309D8EEC244A740F00FAA940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309D8EEB244A740F00FAA940 /* Assets.xcassets */; };
-		309D8EEF244A740F00FAA940 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309D8EEE244A740F00FAA940 /* Preview Assets.xcassets */; };
 		309D8EF2244A740F00FAA940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309D8EF0244A740F00FAA940 /* LaunchScreen.storyboard */; };
+		309D8F02244A79A800FAA940 /* Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F01244A79A800FAA940 /* Drawing.swift */; };
+		309D8F04244A7D7600FAA940 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F03244A7D7600FAA940 /* ViewModel.swift */; };
+		309D8F06244A7F9300FAA940 /* MLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F05244A7F9300FAA940 /* MLService.swift */; };
+		309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F07244A9CAE00FAA940 /* Canvas.swift */; };
+		30D634EB244BEB6E00EE9DDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */; };
+		30D634F2244BED8800EE9DDB /* TaskDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D634F1244BED8800EE9DDB /* TaskDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		309D8EE2244A740E00FAA940 /* DrawerGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawerGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30121E86244BF0300032E073 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		30121E89244CFA5E0032E073 /* DrawnClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DrawnClassifier.mlmodel; sourceTree = "<group>"; };
+		309D8EE2244A740E00FAA940 /* Drawn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309D8EE5244A740E00FAA940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309D8EE7244A740E00FAA940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		309D8EE9244A740E00FAA940 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		309D8EEB244A740F00FAA940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		309D8EEE244A740F00FAA940 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		309D8EF1244A740F00FAA940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		309D8EF3244A740F00FAA940 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		309D8F01244A79A800FAA940 /* Drawing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drawing.swift; sourceTree = "<group>"; };
+		309D8F03244A7D7600FAA940 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		309D8F05244A7F9300FAA940 /* MLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLService.swift; sourceTree = "<group>"; };
+		309D8F07244A9CAE00FAA940 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		30CEBA42244B89D900E7CA55 /* Drawn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Drawn.entitlements; sourceTree = "<group>"; };
+		30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		30D634F1244BED8800EE9DDB /* TaskDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,10 +52,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30121E85244BF0230032E073 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				309D8F07244A9CAE00FAA940 /* Canvas.swift */,
+				30121E86244BF0300032E073 /* CanvasView.swift */,
+			);
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		30121E88244CFA5E0032E073 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30121E89244CFA5E0032E073 /* DrawnClassifier.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		309D8ED9244A740E00FAA940 = {
 			isa = PBXGroup;
 			children = (
-				309D8EE4244A740E00FAA940 /* DrawerGame */,
+				30121E88244CFA5E0032E073 /* Model */,
+				309D8EE4244A740E00FAA940 /* Drawn */,
 				309D8EE3244A740E00FAA940 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,39 +81,93 @@
 		309D8EE3244A740E00FAA940 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				309D8EE2244A740E00FAA940 /* DrawerGame.app */,
+				309D8EE2244A740E00FAA940 /* Drawn.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		309D8EE4244A740E00FAA940 /* DrawerGame */ = {
+		309D8EE4244A740E00FAA940 /* Drawn */ = {
 			isa = PBXGroup;
 			children = (
-				309D8EE5244A740E00FAA940 /* AppDelegate.swift */,
-				309D8EE7244A740E00FAA940 /* SceneDelegate.swift */,
-				309D8EE9244A740E00FAA940 /* ContentView.swift */,
+				30CEBA42244B89D900E7CA55 /* Drawn.entitlements */,
+				30D634EF244BEC1E00EE9DDB /* UI */,
+				30D634EE244BEC1300EE9DDB /* Services */,
+				30D634ED244BEBE900EE9DDB /* Models */,
+				30D634EC244BEBD000EE9DDB /* Common */,
+				30CEBA45244BEB2100E7CA55 /* Supporting Files */,
+			);
+			path = Drawn;
+			sourceTree = "<group>";
+		};
+		30CEBA45244BEB2100E7CA55 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30D634E9244BEB6E00EE9DDB /* Preview Content */,
 				309D8EEB244A740F00FAA940 /* Assets.xcassets */,
 				309D8EF0244A740F00FAA940 /* LaunchScreen.storyboard */,
 				309D8EF3244A740F00FAA940 /* Info.plist */,
-				309D8EED244A740F00FAA940 /* Preview Content */,
 			);
-			path = DrawerGame;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		309D8EED244A740F00FAA940 /* Preview Content */ = {
+		30D634E9244BEB6E00EE9DDB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				309D8EEE244A740F00FAA940 /* Preview Assets.xcassets */,
+				30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		30D634EC244BEBD000EE9DDB /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				309D8EE7244A740E00FAA940 /* SceneDelegate.swift */,
+				309D8EE5244A740E00FAA940 /* AppDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		30D634ED244BEBE900EE9DDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				309D8F01244A79A800FAA940 /* Drawing.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		30D634EE244BEC1300EE9DDB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				309D8F05244A7F9300FAA940 /* MLService.swift */,
+				30D634F1244BED8800EE9DDB /* TaskDataSource.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		30D634EF244BEC1E00EE9DDB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				309D8F03244A7D7600FAA940 /* ViewModel.swift */,
+				309D8EE9244A740E00FAA940 /* ContentView.swift */,
+				30D634F0244BEC2500EE9DDB /* Components */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		30D634F0244BEC2500EE9DDB /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30121E85244BF0230032E073 /* Canvas */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		309D8EE1244A740E00FAA940 /* DrawerGame */ = {
+		309D8EE1244A740E00FAA940 /* Drawn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 309D8EF6244A740F00FAA940 /* Build configuration list for PBXNativeTarget "DrawerGame" */;
+			buildConfigurationList = 309D8EF6244A740F00FAA940 /* Build configuration list for PBXNativeTarget "Drawn" */;
 			buildPhases = (
 				309D8EDE244A740E00FAA940 /* Sources */,
 				309D8EDF244A740E00FAA940 /* Frameworks */,
@@ -90,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = DrawerGame;
+			name = Drawn;
 			productName = DrawerGame;
-			productReference = 309D8EE2244A740E00FAA940 /* DrawerGame.app */;
+			productReference = 309D8EE2244A740E00FAA940 /* Drawn.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +197,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 309D8EDD244A740E00FAA940 /* Build configuration list for PBXProject "DrawerGame" */;
+			buildConfigurationList = 309D8EDD244A740E00FAA940 /* Build configuration list for PBXProject "Drawn" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +210,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				309D8EE1244A740E00FAA940 /* DrawerGame */,
+				309D8EE1244A740E00FAA940 /* Drawn */,
 			);
 		};
 /* End PBXProject section */
@@ -134,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				309D8EF2244A740F00FAA940 /* LaunchScreen.storyboard in Resources */,
-				309D8EEF244A740F00FAA940 /* Preview Assets.xcassets in Resources */,
+				30D634EB244BEB6E00EE9DDB /* Preview Assets.xcassets in Resources */,
 				309D8EEC244A740F00FAA940 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,7 +235,14 @@
 			files = (
 				309D8EE6244A740E00FAA940 /* AppDelegate.swift in Sources */,
 				309D8EE8244A740E00FAA940 /* SceneDelegate.swift in Sources */,
+				30122142244CFA600032E073 /* DrawnClassifier.mlmodel in Sources */,
+				30121E87244BF0300032E073 /* CanvasView.swift in Sources */,
+				309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */,
 				309D8EEA244A740E00FAA940 /* ContentView.swift in Sources */,
+				309D8F04244A7D7600FAA940 /* ViewModel.swift in Sources */,
+				309D8F06244A7F9300FAA940 /* MLService.swift in Sources */,
+				309D8F02244A79A800FAA940 /* Drawing.swift in Sources */,
+				30D634F2244BED8800EE9DDB /* TaskDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,17 +378,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Drawn/Drawn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"DrawerGame/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Drawn/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = 2AB5X5S74A;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DrawerGame/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Drawn/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.DrawerGame;
+				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.Drawn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,17 +400,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Drawn/Drawn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"DrawerGame/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Drawn/Supporting Files/Preview Content\"";
 				DEVELOPMENT_TEAM = 2AB5X5S74A;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = DrawerGame/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Drawn/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.DrawerGame;
+				PRODUCT_BUNDLE_IDENTIFIER = romanmazeev.Drawn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -323,7 +421,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		309D8EDD244A740E00FAA940 /* Build configuration list for PBXProject "DrawerGame" */ = {
+		309D8EDD244A740E00FAA940 /* Build configuration list for PBXProject "Drawn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				309D8EF4244A740F00FAA940 /* Debug */,
@@ -332,7 +430,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		309D8EF6244A740F00FAA940 /* Build configuration list for PBXNativeTarget "DrawerGame" */ = {
+		309D8EF6244A740F00FAA940 /* Build configuration list for PBXNativeTarget "Drawn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				309D8EF7244A740F00FAA940 /* Debug */,

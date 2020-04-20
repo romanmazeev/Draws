@@ -15,7 +15,7 @@ struct ContentView: View {
         ZStack {
             Canvas(drawing: $viewModel.drawing)
             VStack {
-                Text(verbatim: "Draw \(viewModel.drawingTask)")
+                Text(verbatim: "Try drawing: \(viewModel.drawingTask ?? "")")
                     .padding()
                     .font(.headline)
                 if viewModel.prediction != "" {
@@ -25,19 +25,36 @@ struct ContentView: View {
                         .font(.subheadline)
                 }
                 Spacer()
-                Button(
-                    action: {
-                        self.viewModel.clean()
-                    },
-                    label: {
-                        Text(verbatim: "Clean")
-                    }
-                )
-                .padding()
-                .foregroundColor(.white)
-                .background(Color.red)
-                .cornerRadius(12)
-                .padding()
+                HStack {
+                    Button(
+                        action: {
+                            self.viewModel.clean()
+                        },
+                        label: {
+                            Text(verbatim: "Clean")
+                        }
+                    )
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.red)
+                    .cornerRadius(12)
+                    .padding()
+
+                    Button(
+                        action: {
+                            self.viewModel.nextTask()
+                        },
+                        label: {
+                            Text(verbatim: "Next")
+                        }
+                    )
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.blue)
+                    .cornerRadius(12)
+                    .padding()
+                }
+
             }
         }
         .alert(isPresented: $viewModel.isCompleted) {

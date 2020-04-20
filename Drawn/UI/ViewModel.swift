@@ -13,7 +13,7 @@ class ViewModel: ObservableObject {
     @Published var drawing = [[CGPoint]]()
 
     @Published private(set) var prediction = ""
-    @Published private(set) var drawingTask = TaskDataSource.tasks.randomElement()!
+    @Published private(set) var drawingTask = TaskDataSource.tasks.randomElement()
     @Published var isCompleted = false
 
     private var cancellables: Set<AnyCancellable> = .init()
@@ -24,7 +24,7 @@ class ViewModel: ObservableObject {
     init() {
         $drawing
             .filter { $0 != [] }
-            .throttle(for: 0.5, scheduler: DispatchQueue.global(), latest: true)
+            .throttle(for: 1, scheduler: DispatchQueue.global(), latest: true)
             .sink { drawing in
                 self.predict(using: drawing)
             }
@@ -46,7 +46,7 @@ class ViewModel: ObservableObject {
 
     func nextTask() {
         clean()
-        drawingTask = TaskDataSource.tasks.randomElement()!
+        drawingTask = TaskDataSource.tasks.randomElement()
     }
 
     private func predict(using drawing: [[CGPoint]]) {

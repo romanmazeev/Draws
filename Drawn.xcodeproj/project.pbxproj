@@ -18,6 +18,7 @@
 		309D8F04244A7D7600FAA940 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F03244A7D7600FAA940 /* ViewModel.swift */; };
 		309D8F06244A7F9300FAA940 /* MLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F05244A7F9300FAA940 /* MLService.swift */; };
 		309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F07244A9CAE00FAA940 /* Canvas.swift */; };
+		30BCE9EA244DA9ED000D083C /* classes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30BCE9E9244DA9ED000D083C /* classes.txt */; };
 		30D634EB244BEB6E00EE9DDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */; };
 		30D634F2244BED8800EE9DDB /* TaskDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D634F1244BED8800EE9DDB /* TaskDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		309D8F03244A7D7600FAA940 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		309D8F05244A7F9300FAA940 /* MLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLService.swift; sourceTree = "<group>"; };
 		309D8F07244A9CAE00FAA940 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		30BCE9E9244DA9ED000D083C /* classes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.txt; sourceTree = "<group>"; };
 		30CEBA42244B89D900E7CA55 /* Drawn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Drawn.entitlements; sourceTree = "<group>"; };
 		30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30D634F1244BED8800EE9DDB /* TaskDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataSource.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				30121E89244CFA5E0032E073 /* DrawnClassifier.mlmodel */,
+				30BCE9E9244DA9ED000D083C /* classes.txt */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				309D8EF2244A740F00FAA940 /* LaunchScreen.storyboard in Resources */,
 				30D634EB244BEB6E00EE9DDB /* Preview Assets.xcassets in Resources */,
 				309D8EEC244A740F00FAA940 /* Assets.xcassets in Resources */,
+				30BCE9EA244DA9ED000D083C /* classes.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

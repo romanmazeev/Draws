@@ -9,5 +9,9 @@
 import Foundation
 
 struct TaskDataSource {
-    static let tasks = ["triangle", "square"]
+    static var tasks: [String] {
+        guard let path = Bundle.main.path(forResource: "classes", ofType: "txt") else { return [] }
+        let data = try? String(contentsOfFile: path, encoding: .utf8)
+        return data?.components(separatedBy: .newlines).filter { $0.count > 0 } ?? []
+    }
 }

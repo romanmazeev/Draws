@@ -2,13 +2,13 @@ import turicreate as tc
 import numpy as np
 import os
 
-random_state = np.random.RandomState(11000)
+random_state = np.random.RandomState(10000)
 
 # Change if applicable
 dataset_dir = 'Dataset'
 bitmaps_dir = os.path.join(dataset_dir, 'bitmaps')
 npy_ext = '.npy'
-num_examples_per_class = 11000
+num_examples_per_class = 10000
 
 f = open('classes.txt', 'r')
 classes = f.read().splitlines()

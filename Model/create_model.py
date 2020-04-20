@@ -1,8 +1,7 @@
 import turicreate as tc
 
 # Try any one of the following
-SFRAME_PATH = "quickdraw/sframes/bitmap_square_triangle.sframe"
-SFRAME_PATH = "quickdraw/sframes/stroke_square_triangle.sframe"
+SFRAME_PATH = "Dataset/drawn.sframe"
 
 # Load the data
 data =  tc.SFrame(SFRAME_PATH)
@@ -22,8 +21,7 @@ metrics = model.evaluate(test_data)
 print(metrics["accuracy"])
 
 # Save the model for later use in Turi Create
-model.save("square_triangle.model")
+model.save("drawn.model")
 
 # Export for use in Core ML
-model.export_coreml("MySquareTriangleClassifier.mlmodel")
-
+model.export_coreml("Drawn.mlmodel")

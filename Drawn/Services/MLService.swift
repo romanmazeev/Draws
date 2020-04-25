@@ -11,7 +11,7 @@ import Vision
 import Combine
 
 class MLService {
-    private let drawerCalssifier = DrawnClassifier()
+    private let drawerClassifier = QuickDrawUpdatable()
 
     func predict(drawing: Drawing) -> AnyPublisher<String, Error> {
         return Future { promise in
@@ -19,7 +19,7 @@ class MLService {
                 let handler = VNImageRequestHandler(cgImage: drawing.rasterized)
                 let request = VNCoreMLRequest(
                     model: try VNCoreMLModel(
-                        for: self.drawerCalssifier.model
+                        for: self.drawerClassifier.model
                     )
                 ) { request, error in
                     guard let topResult = request.results?.first as? VNClassificationObservation else { return }

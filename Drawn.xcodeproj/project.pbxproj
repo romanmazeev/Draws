@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		30121E87244BF0300032E073 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30121E86244BF0300032E073 /* CanvasView.swift */; };
-		30122142244CFA600032E073 /* DrawnClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30121E89244CFA5E0032E073 /* DrawnClassifier.mlmodel */; };
 		309D8EE6244A740E00FAA940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE5244A740E00FAA940 /* AppDelegate.swift */; };
 		309D8EE8244A740E00FAA940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE7244A740E00FAA940 /* SceneDelegate.swift */; };
 		309D8EEA244A740E00FAA940 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE9244A740E00FAA940 /* ContentView.swift */; };
@@ -19,13 +18,13 @@
 		309D8F06244A7F9300FAA940 /* MLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F05244A7F9300FAA940 /* MLService.swift */; };
 		309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F07244A9CAE00FAA940 /* Canvas.swift */; };
 		30BCE9EA244DA9ED000D083C /* classes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30BCE9E9244DA9ED000D083C /* classes.txt */; };
+		30D25ACC2453FCEB00263761 /* QuickDrawUpdatable.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30D25ACB2453FCEB00263761 /* QuickDrawUpdatable.mlmodel */; };
 		30D634EB244BEB6E00EE9DDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */; };
 		30D634F2244BED8800EE9DDB /* TaskDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D634F1244BED8800EE9DDB /* TaskDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30121E86244BF0300032E073 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
-		30121E89244CFA5E0032E073 /* DrawnClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = DrawnClassifier.mlmodel; sourceTree = "<group>"; };
 		309D8EE2244A740E00FAA940 /* Drawn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		309D8EE5244A740E00FAA940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		309D8EE7244A740E00FAA940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +38,7 @@
 		309D8F07244A9CAE00FAA940 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
 		30BCE9E9244DA9ED000D083C /* classes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.txt; sourceTree = "<group>"; };
 		30CEBA42244B89D900E7CA55 /* Drawn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Drawn.entitlements; sourceTree = "<group>"; };
+		30D25ACB2453FCEB00263761 /* QuickDrawUpdatable.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = QuickDrawUpdatable.mlmodel; sourceTree = "<group>"; };
 		30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30D634F1244BED8800EE9DDB /* TaskDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,8 +66,8 @@
 		30121E88244CFA5E0032E073 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				30121E89244CFA5E0032E073 /* DrawnClassifier.mlmodel */,
 				30BCE9E9244DA9ED000D083C /* classes.txt */,
+				30D25ACB2453FCEB00263761 /* QuickDrawUpdatable.mlmodel */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -239,8 +239,8 @@
 			files = (
 				309D8EE6244A740E00FAA940 /* AppDelegate.swift in Sources */,
 				309D8EE8244A740E00FAA940 /* SceneDelegate.swift in Sources */,
-				30122142244CFA600032E073 /* DrawnClassifier.mlmodel in Sources */,
 				30121E87244BF0300032E073 /* CanvasView.swift in Sources */,
+				30D25ACC2453FCEB00263761 /* QuickDrawUpdatable.mlmodel in Sources */,
 				309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */,
 				309D8EEA244A740E00FAA940 /* ContentView.swift in Sources */,
 				309D8F04244A7D7600FAA940 /* ViewModel.swift in Sources */,

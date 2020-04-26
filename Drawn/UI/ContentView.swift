@@ -53,6 +53,20 @@ struct ContentView: View {
                     .background(Color.blue)
                     .cornerRadius(12)
                     .padding()
+
+                    Button(
+                        action: {
+                            self.viewModel.rememberDrawing()
+                        },
+                        label: {
+                            Text(verbatim: "Remember")
+                        }
+                    )
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.green)
+                    .cornerRadius(12)
+                    .padding()
                 }
 
             }

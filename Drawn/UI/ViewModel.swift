@@ -49,8 +49,13 @@ class ViewModel: ObservableObject {
         drawingTask = TaskDataSource.tasks.randomElement()
     }
 
+    func rememberDrawing() {
+        mlService.updateModel(image: Drawing(drawing: drawing).rasterized, classLabel: drawingTask!)
+        nextTask()
+    }
+
     private func predict(using drawing: [[CGPoint]]) {
-        mlService.predict(drawing: Drawing(drawing: drawing))
+        mlService.predict(image: Drawing(drawing: drawing).rasterized)
             .receive(on: RunLoop.main)
             .sink(
                 receiveCompletion: { _ in },

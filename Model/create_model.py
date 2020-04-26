@@ -1,6 +1,8 @@
 import coremltools
 
-output_labels = ['Apple', 'Bowtie', 'Candle', 'Door', 'Envelope', 'Fish', 'Guitar', 'Ice Cream', 'Lightning', 'Moon', 'Mountain', 'Star', 'Tent', 'Toothbrush', 'Wristwatch']
+f = open('classes.txt', 'r')
+output_labels = f.read().splitlines()
+f.close()
 
 coreml_model = coremltools.converters.keras.convert('QuickDraw.h5', input_names=['image'], output_names=['output'],
                                                    class_labels=output_labels,

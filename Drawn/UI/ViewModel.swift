@@ -13,7 +13,7 @@ class ViewModel: ObservableObject {
     @Published var drawing = [[CGPoint]]()
 
     @Published private(set) var prediction = ""
-    @Published private(set) var drawingTask = TaskDataSource.tasks.randomElement()
+    @Published private(set) var drawingTask = TaskDataSource.tasks.randomElement()!
     @Published var isCompleted = false
 
     private var cancellables: Set<AnyCancellable> = .init()
@@ -44,11 +44,11 @@ class ViewModel: ObservableObject {
 
     func nextTask() {
         clean()
-        drawingTask = TaskDataSource.tasks.randomElement()
+        drawingTask = TaskDataSource.tasks.randomElement()!
     }
 
     func rememberDrawing() {
-        mlService.updateModel(image: Drawing(drawing: drawing).rasterized, classLabel: drawingTask!)
+        mlService.updateModel(image: Drawing(drawing: drawing).rasterized, classLabel: drawingTask)
         nextTask()
     }
 

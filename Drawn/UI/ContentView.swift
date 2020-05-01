@@ -12,57 +12,54 @@ struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        ZStack {
+        VStack {
+            Text(verbatim: "Try drawing: \(viewModel.drawingTask)")
+                .padding()
+                .font(.headline)
+
+            Text(verbatim: viewModel.prediction != "" ? "Now it`s look like \(viewModel.prediction)" : "")
+                .foregroundColor(viewModel.isCompleted ? Color.green : Color.red)
+                .font(.subheadline)
+
             Canvas(drawing: $viewModel.drawing)
-            VStack {
-                Text(verbatim: "Try drawing: \(viewModel.drawingTask ?? "")")
-                    .padding()
-                    .font(.headline)
-                if viewModel.prediction != "" {
-                    Text(verbatim: "Now it`s look like \(viewModel.prediction)")
-                        .foregroundColor(viewModel.isCompleted ? Color.green : Color.red)
-                        .padding()
-                        .font(.subheadline)
-                }
-                Spacer()
-                HStack {
-                    ActionButton(
-                        action: {
-                            self.viewModel.clean()
-                        },
-                        backgroundColor: .gray,
-                        title: "Clean"
-                    )
 
-                    ActionButton(
-                        action: {
-                            self.viewModel.nextTask()
-                        },
-                        backgroundColor: .blue,
-                        title: "Next"
-                    )
-                }
-                .padding([.bottom, .horizontal])
+            HStack {
+                ActionButton(
+                    action: {
+                        self.viewModel.clean()
+                },
+                    backgroundColor: .gray,
+                    title: "Clean"
+                )
 
-                HStack {
-                    ActionButton(
-                        action: {
-                            self.viewModel.rememberDrawing()
-                        },
-                        backgroundColor: .green,
-                        title: "Remember"
-                    )
-                    
-                    ActionButton(
-                        action: {
-                            self.viewModel.resetPredictor()
-                        },
-                        backgroundColor: .red,
-                        title: "Reset predictor"
-                    )
-                }
-                .padding(.horizontal)
+                ActionButton(
+                    action: {
+                        self.viewModel.nextTask()
+                },
+                    backgroundColor: .blue,
+                    title: "Next"
+                )
             }
+            .padding([.bottom, .horizontal])
+
+            HStack {
+                ActionButton(
+                    action: {
+                        self.viewModel.rememberDrawing()
+                },
+                    backgroundColor: .green,
+                    title: "Remember"
+                )
+
+                ActionButton(
+                    action: {
+                        self.viewModel.resetPredictor()
+                },
+                    backgroundColor: .red,
+                    title: "Reset predictor"
+                )
+            }
+            .padding(.horizontal)
         }
         .alert(isPresented: $viewModel.isCompleted) {
             Alert(

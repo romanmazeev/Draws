@@ -26,49 +26,42 @@ struct ContentView: View {
                 }
                 Spacer()
                 HStack {
-                    Button(
+                    ActionButton(
                         action: {
                             self.viewModel.clean()
-                        },
-                        label: {
-                            Text(verbatim: "Clean")
-                        }
+                    },
+                        backgroundColor: .gray,
+                        title: "Clean"
                     )
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.red)
-                    .cornerRadius(12)
-                    .padding()
 
-                    Button(
+                    ActionButton(
                         action: {
                             self.viewModel.nextTask()
-                        },
-                        label: {
-                            Text(verbatim: "Next")
-                        }
+                    },
+                        backgroundColor: .blue,
+                        title: "Next"
                     )
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(12)
-                    .padding()
+                }
+                .padding([.bottom, .horizontal])
 
-                    Button(
+                HStack {
+                    ActionButton(
                         action: {
                             self.viewModel.rememberDrawing()
-                        },
-                        label: {
-                            Text(verbatim: "Remember")
-                        }
+                    },
+                        backgroundColor: .green,
+                        title: "Remember"
                     )
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.green)
-                    .cornerRadius(12)
-                    .padding()
+                    
+                    ActionButton(
+                        action: {
+                            self.viewModel.resetPredictor()
+                        },
+                        backgroundColor: .red,
+                        title: "Reset predictor"
+                    )
                 }
-
+                .padding(.horizontal)
             }
         }
         .alert(isPresented: $viewModel.isCompleted) {

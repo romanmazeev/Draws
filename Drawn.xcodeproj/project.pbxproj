@@ -19,6 +19,7 @@
 		309D8F04244A7D7600FAA940 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F03244A7D7600FAA940 /* ViewModel.swift */; };
 		309D8F06244A7F9300FAA940 /* MLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F05244A7F9300FAA940 /* MLService.swift */; };
 		309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F07244A9CAE00FAA940 /* Canvas.swift */; };
+		30B48461245C9A88009198B1 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B48460245C9A88009198B1 /* ActionButton.swift */; };
 		30D634EB244BEB6E00EE9DDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */; };
 		30D634F2244BED8800EE9DDB /* TaskDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D634F1244BED8800EE9DDB /* TaskDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		309D8F03244A7D7600FAA940 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		309D8F05244A7F9300FAA940 /* MLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLService.swift; sourceTree = "<group>"; };
 		309D8F07244A9CAE00FAA940 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
+		30B48460245C9A88009198B1 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		30CEBA42244B89D900E7CA55 /* Drawn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Drawn.entitlements; sourceTree = "<group>"; };
 		30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30D634F1244BED8800EE9DDB /* TaskDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataSource.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		30D634F0244BEC2500EE9DDB /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				30B48460245C9A88009198B1 /* ActionButton.swift */,
 				30121E85244BF0230032E073 /* Canvas */,
 			);
 			path = Components;
@@ -240,6 +243,7 @@
 				309D8EE6244A740E00FAA940 /* AppDelegate.swift in Sources */,
 				309D8EE8244A740E00FAA940 /* SceneDelegate.swift in Sources */,
 				30121E87244BF0300032E073 /* CanvasView.swift in Sources */,
+				30B48461245C9A88009198B1 /* ActionButton.swift in Sources */,
 				30127EBC24541886009DAD45 /* QuickDrawUpdatable.mlmodel in Sources */,
 				309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */,
 				309D8EEA244A740E00FAA940 /* ContentView.swift in Sources */,

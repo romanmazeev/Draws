@@ -55,6 +55,10 @@ class ViewModel: ObservableObject {
         nextTask()
     }
 
+    func resetPredictor() {
+        mlService.resetDrawingClassifier()
+    }
+
     private func predict(using drawing: [[CGPoint]]) {
         mlService.predict(image: Drawing(drawing: drawing).rasterized)
             .receive(on: RunLoop.main)

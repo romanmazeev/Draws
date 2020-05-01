@@ -66,14 +66,15 @@ class MLService {
         let usingUpdatedModel = updatedDrawingClassifier != nil
         let currentModelURL = usingUpdatedModel ? updatedModelURL : defaultModelURL
 
-        try? updateModel(
-            at: currentModelURL,
-            with: banchProvider,
+        try? MLUpdateTask(
+            forModelAt: currentModelURL,
+            trainingData: banchProvider,
+            configuration: nil,
             completionHandler: {
                 self.saveUpdatedModel($0)
                 self.loadUpdatedModel()
             }
-        )
+        ).resume()
     }
 
     func resetDrawingClassifier() {
@@ -82,20 +83,6 @@ class MLService {
         if FileManager.default.fileExists(atPath: updatedModelURL.path) {
             try? FileManager.default.removeItem(at: updatedModelURL)
         }
-    }
-
-    private func updateModel(at url: URL,
-                             with trainingData: MLBatchProvider,
-                             completionHandler: @escaping (MLUpdateContext) -> Void) throws {
-        
-        let updateTask = try MLUpdateTask(
-            forModelAt: url,
-            trainingData: trainingData,
-            configuration: nil,
-            completionHandler: completionHandler
-        )
-
-        updateTask.resume()
     }
 
     private func loadUpdatedModel()  {

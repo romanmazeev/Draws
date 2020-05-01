@@ -29,7 +29,7 @@ struct ContentView: View {
                     ActionButton(
                         action: {
                             self.viewModel.clean()
-                    },
+                        },
                         backgroundColor: .gray,
                         title: "Clean"
                     )
@@ -37,7 +37,7 @@ struct ContentView: View {
                     ActionButton(
                         action: {
                             self.viewModel.nextTask()
-                    },
+                        },
                         backgroundColor: .blue,
                         title: "Next"
                     )
@@ -48,7 +48,7 @@ struct ContentView: View {
                     ActionButton(
                         action: {
                             self.viewModel.rememberDrawing()
-                    },
+                        },
                         backgroundColor: .green,
                         title: "Remember"
                     )

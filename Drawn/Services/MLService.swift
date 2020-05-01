@@ -38,9 +38,10 @@ class MLService {
             do {
                 let featureValue = try MLFeatureValue(
                     cgImage: image,
-                    constraint: self.currentModel.imageConstraint!,
+                    constraint: self.currentModel.imageConstraint,
                     options: nil
                 )
+                
                 let prediction = try self.currentModel.prediction(
                     input: QuickDrawUpdatableInput(
                         image: featureValue.imageBufferValue!
@@ -55,26 +56,38 @@ class MLService {
         .eraseToAnyPublisher()
     }
 
-    func updateModel(image: CGImage, classLabel: String) {
-        let featureValue = try! MLFeatureValue(cgImage: image, constraint: currentModel.imageConstraint!, options: nil)
-        let featureProvider = QuickDrawUpdatableTrainingInput(
-            image: featureValue.imageBufferValue!,
-            classLabel: classLabel
-        )
-        let banchProvider = MLArrayBatchProvider(array: [featureProvider])
+    func updateModel(image: CGImage, classLabel: String) -> AnyPublisher<Void, Error> {
+        return Future { promise in
+            do {
+                let featureValue = try MLFeatureValue(
+                    cgImage: image,
+                    constraint: self.currentModel.imageConstraint,
+                    options: nil
+                )
+                let featureProvider = QuickDrawUpdatableTrainingInput(
+                    image: featureValue.imageBufferValue!,
+                    classLabel: classLabel
+                )
+                let banchProvider = MLArrayBatchProvider(array: [featureProvider])
 
-        let usingUpdatedModel = updatedDrawingClassifier != nil
-        let currentModelURL = usingUpdatedModel ? updatedModelURL : defaultModelURL
+                let usingUpdatedModel = self.updatedDrawingClassifier != nil
+                let currentModelURL = usingUpdatedModel ? self.updatedModelURL : self.defaultModelURL
 
-        try? MLUpdateTask(
-            forModelAt: currentModelURL,
-            trainingData: banchProvider,
-            configuration: nil,
-            completionHandler: {
-                self.saveUpdatedModel($0)
-                self.loadUpdatedModel()
+                try MLUpdateTask(
+                    forModelAt: currentModelURL,
+                    trainingData: banchProvider,
+                    configuration: nil,
+                    completionHandler: {
+                        self.saveUpdatedModel($0)
+                        self.loadUpdatedModel()
+                        promise(.success(()))
+                    }
+                ).resume()
+            } catch {
+                promise(.failure(error))
             }
-        ).resume()
+        }
+        .eraseToAnyPublisher()
     }
 
     func resetDrawingClassifier() {
@@ -104,7 +117,7 @@ class MLService {
 }
 
 extension QuickDrawUpdatable {
-    var imageConstraint: MLImageConstraint? {
-        model.modelDescription.inputDescriptionsByName["image"]?.imageConstraint
+    var imageConstraint: MLImageConstraint {
+        model.modelDescription.inputDescriptionsByName["image"]!.imageConstraint!
     }
 }

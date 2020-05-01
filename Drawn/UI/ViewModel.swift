@@ -31,9 +31,10 @@ class ViewModel: ObservableObject {
             .store(in: &cancellables)
 
         $prediction
-            .map { $0 == self.drawingTask }
-            .sink { isCompleted in
-                self.isCompleted = isCompleted
+            .filter { $0 == self.drawingTask }
+            .sink { prediction in
+                self.isCompleted = true
+                self.mlService.updateModel(image: Drawing(drawing: self.drawing).rasterized, classLabel: prediction)
             }
             .store(in: &cancellables)
     }

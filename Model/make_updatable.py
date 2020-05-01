@@ -4,7 +4,7 @@ coreml_model_path = "./QuickDraw.mlmodel"
 
 spec = coremltools.utils.load_spec(coreml_model_path)
 builder = coremltools.models.neural_network.NeuralNetworkBuilder(spec=spec)
-builder.inspect_layers(last=3)
+builder.inspect_layers(last=2)
 builder.inspect_input_features()
 
 neuralnetwork_spec = builder.spec
@@ -22,8 +22,8 @@ builder.make_updatable(['dense_3', 'dense_2'])
 builder.set_categorical_cross_entropy_loss(name='lossLayer', input='output')
 
 from coremltools.models.neural_network import SgdParams
-builder.set_sgd_optimizer(SgdParams(lr=0.01, batch=5))
-builder.set_epochs(2)
+builder.set_sgd_optimizer(SgdParams(lr=0.001, batch=1))
+builder.set_epochs(1)
 
 model_spec.isUpdatable = True
 model_spec.specificationVersion = coremltools._MINIMUM_UPDATABLE_SPEC_VERSION

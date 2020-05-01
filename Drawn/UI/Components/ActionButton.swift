@@ -22,8 +22,8 @@ struct ActionButton: View {
                 Text(verbatim: title)
             }
         )
+        .frame(minWidth: 0, maxWidth: .infinity)
         .padding()
-        .frame(minWidth: 0, maxWidth: .greatestFiniteMagnitude)
         .foregroundColor(.white)
         .background(backgroundColor)
         .cornerRadius(12)

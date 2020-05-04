@@ -19,5 +19,5 @@ For conversion, a pre-trained keras [model](https://github.com/akshaybahadur21/Q
 2. Run this [script](https://github.com/romanmazeev/Draws/blob/master/Model/create_model.py) to generate CoreML model.
 
 ### How to make model updatable
-In order to make the model updatable, you need to run the [script] (https://github.com/romanmazeev/Draws/blob/master/Model/make_updatable.py).
+In order to make the model updatable, you need to run the [script](https://github.com/romanmazeev/Draws/blob/master/Model/make_updatable.py).
  

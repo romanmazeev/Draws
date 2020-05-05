@@ -20,10 +20,10 @@ struct ActionButton: View {
             },
             label: {
                 Text(verbatim: title)
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .padding()
             }
         )
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .padding()
         .foregroundColor(.white)
         .background(backgroundColor)
         .cornerRadius(12)

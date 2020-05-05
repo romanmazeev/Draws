@@ -1,5 +1,5 @@
 # Draws
-iOS/MacOS app that recognize drawings
+iOS/MacOS app that recognize drawings with the possibility of personalization for the user.
 
 ## Screenshots
 ### Drawing recognition

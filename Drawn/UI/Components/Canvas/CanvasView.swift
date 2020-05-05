@@ -14,16 +14,13 @@ protocol CanvasViewDelegate: class {
 
 class CanvasView: UIView {
     weak var delegate: CanvasViewDelegate?
-    private var tempImageView = UIImageView()
-    private var mainImageView = UIImageView()
+    private var imageView = UIImageView()
     private var lastPoint = CGPoint.zero
-    private var swiped = false
 
     override init(frame: CGRect) {
         super.init(frame: frame)
 
-        addSubview(mainImageView)
-        addSubview(tempImageView)
+        addSubview(imageView)
     }
 
     required init?(coder: NSCoder) {
@@ -32,8 +29,7 @@ class CanvasView: UIView {
 
     override var frame: CGRect {
         didSet {
-            tempImageView.frame = frame
-            mainImageView.frame = frame
+            imageView.frame = frame
         }
     }
 
@@ -44,8 +40,7 @@ class CanvasView: UIView {
     }
 
     func clean() {
-        mainImageView.image = nil
-        tempImageView.image = nil
+        imageView.image = nil
         if !drawing.isEmpty {
             drawing = []
         }
@@ -54,7 +49,7 @@ class CanvasView: UIView {
     func drawLine(from fromPoint: CGPoint, to toPoint: CGPoint) {
         UIGraphicsBeginImageContext(self.frame.size)
         guard let context = UIGraphicsGetCurrentContext() else { return }
-        tempImageView.image?.draw(in: self.bounds)
+        imageView.image?.draw(in: self.bounds)
 
         context.move(to: fromPoint)
         context.addLine(to: toPoint)
@@ -68,42 +63,22 @@ class CanvasView: UIView {
 
         context.strokePath()
 
-        tempImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        tempImageView.alpha = 1
+        imageView.image = UIGraphicsGetImageFromCurrentImageContext()
+        imageView.alpha = 1
 
         UIGraphicsEndImageContext()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else {
-            return
-        }
-        swiped = false
+        guard let touch = touches.first else { return }
         lastPoint = touch.location(in: self)
     }
 
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else {
-            return
-        }
-        swiped = true
+        guard let touch = touches.first else { return }
         let currentPoint = touch.location(in: self)
         drawLine(from: lastPoint, to: currentPoint)
 
         lastPoint = currentPoint
-    }
-
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if !swiped {
-            drawLine(from: lastPoint, to: lastPoint)
-        }
-
-        UIGraphicsBeginImageContext(mainImageView.frame.size)
-        mainImageView.image?.draw(in: self.bounds, blendMode: .normal, alpha: 1.0)
-        tempImageView.image?.draw(in: self.bounds, blendMode: .normal, alpha: 1)
-        mainImageView.image = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext()
-
-        tempImageView.image = nil
     }
 }

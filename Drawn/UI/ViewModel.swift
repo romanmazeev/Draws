@@ -48,7 +48,7 @@ class ViewModel: ObservableObject {
     }
 
     func rememberDrawing() {
-        mlService.updateModel(image: Drawing(drawing: drawing).rasterized, classLabel: drawingTask)
+        mlService.updateModel(image: Drawing(drawing).rasterized, classLabel: drawingTask)
             .sink(
                 // TODO: Add error handling
                 receiveCompletion: { _ in },
@@ -63,7 +63,7 @@ class ViewModel: ObservableObject {
     }
 
     private func predict(using drawing: [[CGPoint]]) {
-        mlService.predict(image: Drawing(drawing: drawing).rasterized)
+        mlService.predict(image: Drawing(drawing).rasterized)
             .receive(on: RunLoop.main)
             .sink(
                 // TODO: Add error handling

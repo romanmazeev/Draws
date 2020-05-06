@@ -1,5 +1,12 @@
 # Draws
-iOS/MacOS app that recognize drawings
+iOS/MacOS app that recognize drawings with the possibility of personalization for the user.
+
+## Screenshots
+### Drawing recognition
+![recognition](https://i.imgur.com/uwyfrIQ.gif)
+
+### Drawing recognition after model updating
+![updated](https://i.imgur.com/iYRcPt6.gif)
 
 ## Requirements
 - Xcode 11

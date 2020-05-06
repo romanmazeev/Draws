@@ -29,17 +29,13 @@ struct ContentView: View {
             VStack {
                 HStack {
                     ActionButton(
-                        action: {
-                            self.viewModel.clean()
-                    },
+                        action: self.viewModel.clean,
                         backgroundColor: .gray,
                         title: "Clean"
                     )
 
                     ActionButton(
-                        action: {
-                            self.viewModel.nextTask()
-                    },
+                        action: self.viewModel.nextTask,
                         backgroundColor: .blue,
                         title: "Next"
                     )
@@ -48,17 +44,13 @@ struct ContentView: View {
 
                 HStack {
                     ActionButton(
-                        action: {
-                            self.viewModel.rememberDrawing()
-                    },
+                        action: self.viewModel.rememberDrawing,
                         backgroundColor: .green,
                         title: "Remember"
                     )
 
                     ActionButton(
-                        action: {
-                            self.viewModel.resetPredictor()
-                    },
+                        action: self.viewModel.resetPredictor,
                         backgroundColor: .red,
                         title: "Reset predictor"
                     )
@@ -70,9 +62,7 @@ struct ContentView: View {
             Alert(
                 title: Text(verbatim: "Good job"),
                 message: Text(verbatim: "Try another one"),
-                dismissButton: .cancel({
-                    self.viewModel.nextTask()
-                })
+                dismissButton: .cancel(self.viewModel.nextTask)
             )
         }
     }

@@ -25,9 +25,7 @@ class ViewModel: ObservableObject {
         $drawing
             .filter { $0 != [] }
             .throttle(for: 1, scheduler: DispatchQueue.global(), latest: true)
-            .sink { drawing in
-                self.predict(using: drawing)
-            }
+            .sink { self.predict(using: $0) }
             .store(in: &cancellables)
 
         $prediction
@@ -68,9 +66,7 @@ class ViewModel: ObservableObject {
             .sink(
                 // TODO: Add error handling
                 receiveCompletion: { _ in },
-                receiveValue: { prediction in
-                    self.prediction = prediction
-                }
+                receiveValue: { self.prediction = $0 }
             )
             .store(in: &predictionCancellables)
     }

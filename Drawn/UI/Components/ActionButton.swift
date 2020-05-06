@@ -15,9 +15,7 @@ struct ActionButton: View {
     
     var body: some View {
         Button(
-            action: {
-                self.action()
-            },
+            action: self.action,
             label: {
                 Text(verbatim: title)
                     .frame(minWidth: 0, maxWidth: .infinity)

@@ -10,8 +10,8 @@
 		30121E87244BF0300032E073 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30121E86244BF0300032E073 /* CanvasView.swift */; };
 		30127EAF24541886009DAD45 /* classes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 30127E9D24541886009DAD45 /* classes.txt */; };
 		30127EBC24541886009DAD45 /* QuickDrawUpdatable.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 30127EAD24541886009DAD45 /* QuickDrawUpdatable.mlmodel */; };
-		309D8EE6244A740E00FAA940 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE5244A740E00FAA940 /* AppDelegate.swift */; };
-		309D8EE8244A740E00FAA940 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE7244A740E00FAA940 /* SceneDelegate.swift */; };
+		30301C0525EC006F001BF678 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30301C0425EC006F001BF678 /* ActionButton.swift */; };
+		309D8EE6244A740E00FAA940 /* DrawnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE5244A740E00FAA940 /* DrawnApp.swift */; };
 		309D8EEA244A740E00FAA940 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8EE9244A740E00FAA940 /* ContentView.swift */; };
 		309D8EEC244A740F00FAA940 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 309D8EEB244A740F00FAA940 /* Assets.xcassets */; };
 		309D8EF2244A740F00FAA940 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 309D8EF0244A740F00FAA940 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,6 @@
 		309D8F04244A7D7600FAA940 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F03244A7D7600FAA940 /* ViewModel.swift */; };
 		309D8F06244A7F9300FAA940 /* MLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F05244A7F9300FAA940 /* MLService.swift */; };
 		309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 309D8F07244A9CAE00FAA940 /* Canvas.swift */; };
-		30B48461245C9A88009198B1 /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B48460245C9A88009198B1 /* ActionButton.swift */; };
 		30D634EB244BEB6E00EE9DDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */; };
 		30D634F2244BED8800EE9DDB /* TaskDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30D634F1244BED8800EE9DDB /* TaskDataSource.swift */; };
 /* End PBXBuildFile section */
@@ -28,9 +27,9 @@
 		30121E86244BF0300032E073 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		30127E9D24541886009DAD45 /* classes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = classes.txt; sourceTree = "<group>"; };
 		30127EAD24541886009DAD45 /* QuickDrawUpdatable.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = QuickDrawUpdatable.mlmodel; sourceTree = "<group>"; };
+		30301C0425EC006F001BF678 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		309D8EE2244A740E00FAA940 /* Drawn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drawn.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		309D8EE5244A740E00FAA940 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		309D8EE7244A740E00FAA940 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		309D8EE5244A740E00FAA940 /* DrawnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawnApp.swift; sourceTree = "<group>"; };
 		309D8EE9244A740E00FAA940 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		309D8EEB244A740F00FAA940 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		309D8EF1244A740F00FAA940 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,7 +38,6 @@
 		309D8F03244A7D7600FAA940 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		309D8F05244A7F9300FAA940 /* MLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLService.swift; sourceTree = "<group>"; };
 		309D8F07244A9CAE00FAA940 /* Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Canvas.swift; sourceTree = "<group>"; };
-		30B48460245C9A88009198B1 /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 		30CEBA42244B89D900E7CA55 /* Drawn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Drawn.entitlements; sourceTree = "<group>"; };
 		30D634EA244BEB6E00EE9DDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		30D634F1244BED8800EE9DDB /* TaskDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDataSource.swift; sourceTree = "<group>"; };
@@ -72,6 +70,15 @@
 				30127EAD24541886009DAD45 /* QuickDrawUpdatable.mlmodel */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		30301C0725EC0077001BF678 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				30301C0425EC006F001BF678 /* ActionButton.swift */,
+				30121E85244BF0230032E073 /* Canvas */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		309D8ED9244A740E00FAA940 = {
@@ -126,8 +133,7 @@
 		30D634EC244BEBD000EE9DDB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				309D8EE7244A740E00FAA940 /* SceneDelegate.swift */,
-				309D8EE5244A740E00FAA940 /* AppDelegate.swift */,
+				309D8EE5244A740E00FAA940 /* DrawnApp.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -154,18 +160,9 @@
 			children = (
 				309D8F03244A7D7600FAA940 /* ViewModel.swift */,
 				309D8EE9244A740E00FAA940 /* ContentView.swift */,
-				30D634F0244BEC2500EE9DDB /* Components */,
+				30301C0725EC0077001BF678 /* Components */,
 			);
 			path = UI;
-			sourceTree = "<group>";
-		};
-		30D634F0244BEC2500EE9DDB /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				30B48460245C9A88009198B1 /* ActionButton.swift */,
-				30121E85244BF0230032E073 /* Canvas */,
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +192,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Roman Mazeev";
 				TargetAttributes = {
 					309D8EE1244A740E00FAA940 = {
@@ -240,10 +237,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				309D8EE6244A740E00FAA940 /* AppDelegate.swift in Sources */,
-				309D8EE8244A740E00FAA940 /* SceneDelegate.swift in Sources */,
+				309D8EE6244A740E00FAA940 /* DrawnApp.swift in Sources */,
 				30121E87244BF0300032E073 /* CanvasView.swift in Sources */,
-				30B48461245C9A88009198B1 /* ActionButton.swift in Sources */,
 				30127EBC24541886009DAD45 /* QuickDrawUpdatable.mlmodel in Sources */,
 				309D8F08244A9CAE00FAA940 /* Canvas.swift in Sources */,
 				309D8EEA244A740E00FAA940 /* ContentView.swift in Sources */,
@@ -251,6 +246,7 @@
 				309D8F06244A7F9300FAA940 /* MLService.swift in Sources */,
 				309D8F02244A79A800FAA940 /* Drawing.swift in Sources */,
 				30D634F2244BED8800EE9DDB /* TaskDataSource.swift in Sources */,
+				30301C0525EC006F001BF678 /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +290,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -318,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -354,6 +351,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -372,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -392,6 +390,8 @@
 				DEVELOPMENT_TEAM = 2AB5X5S74A;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Drawn/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -400,7 +400,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -414,6 +414,8 @@
 				DEVELOPMENT_TEAM = 2AB5X5S74A;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Drawn/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -422,7 +424,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};

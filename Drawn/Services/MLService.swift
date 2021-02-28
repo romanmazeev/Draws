@@ -1,6 +1,6 @@
 //
 //  MLService.swift
-//  DrawerGame
+//  Drawn
 //
 //  Created by Roman Mazeev on 18.04.2020.
 //  Copyright © 2020 Roman Mazeev. All rights reserved.
@@ -12,7 +12,7 @@ import CoreImage
 
 class MLService {
     private var updatedDrawingClassifier: QuickDrawUpdatable?
-    private let defaultDrawingClassifier = QuickDrawUpdatable()
+    private let defaultDrawingClassifier = try! QuickDrawUpdatable(configuration: .init())
 
     private var currentModel: QuickDrawUpdatable {
         updatedDrawingClassifier ?? defaultDrawingClassifier

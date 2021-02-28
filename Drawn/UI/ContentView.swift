@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  DrawerGame
+//  Drawn
 //
 //  Created by Roman Mazeev on 18.04.2020.
 //  Copyright © 2020 Roman Mazeev. All rights reserved.
@@ -12,62 +12,54 @@ struct ContentView: View {
     @ObservedObject var viewModel: ViewModel
 
     var body: some View {
-        VStack {
-            Text(verbatim: "Try drawing: \(viewModel.drawingTask)")
-                .padding()
-                .font(.headline)
-
-            Text(verbatim: viewModel.prediction != "" ? "Now it`s look like \(viewModel.prediction)" : "")
-                .foregroundColor(viewModel.isCompleted ? Color.green : Color.red)
-                .font(.subheadline)
-
+        ZStack {
             Canvas(drawing: $viewModel.drawing)
+                .ignoresSafeArea()
 
-            HStack {
-                ActionButton(
-                    action: {
-                        self.viewModel.clean()
-                },
-                    backgroundColor: .gray,
-                    title: "Clean"
-                )
+            VStack {
+                Text(verbatim: "Try to draw: \(viewModel.drawingTask)")
+                    .padding()
+                    .font(.title)
 
-                ActionButton(
-                    action: {
-                        self.viewModel.nextTask()
-                },
-                    backgroundColor: .blue,
-                    title: "Next"
-                )
+                if !viewModel.prediction.isEmpty {
+                    Text(verbatim: "It seems to be \(viewModel.prediction)")
+                        .foregroundColor(viewModel.isCompleted ? Color.green : Color.red)
+                        .font(.subheadline)
+                }
+
+                Spacer()
+
+                VStack {
+                    HStack {
+                        ActionButton(type: .clean) {
+                            self.viewModel.clean()
+                        }
+
+                        ActionButton(type: .next) {
+                            self.viewModel.nextTask()
+                        }
+                    }
+
+                    HStack {
+                        ActionButton(type: .remember) {
+                            self.viewModel.rememberDrawing()
+                        }
+
+                        ActionButton(type: .resetPredictor) {
+                            self.viewModel.resetPredictor()
+                        }
+                    }
+                }
+                .padding()
             }
-            .padding([.bottom, .horizontal])
-
-            HStack {
-                ActionButton(
-                    action: {
-                        self.viewModel.rememberDrawing()
-                },
-                    backgroundColor: .green,
-                    title: "Remember"
-                )
-
-                ActionButton(
-                    action: {
-                        self.viewModel.resetPredictor()
-                },
-                    backgroundColor: .red,
-                    title: "Reset predictor"
-                )
-            }
-            .padding(.horizontal)
         }
         .alert(isPresented: $viewModel.isCompleted) {
             Alert(
                 title: Text(verbatim: "Good job"),
                 message: Text(verbatim: "Try another one"),
-                dismissButton: .cancel({
+                dismissButton: .cancel {
                     self.viewModel.nextTask()
-                })
+                }
             )
         }
     }

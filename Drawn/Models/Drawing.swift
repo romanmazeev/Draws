@@ -17,16 +17,9 @@ struct Drawing {
     private var maxX: CGFloat = 0.0
     private var maxY: CGFloat = 0.0
 
-    mutating func addPoint(_ point: CGPoint) {
-        minX = min(point.x, minX)
-        maxX = max(point.x, maxX)
-        minY = min(point.y, minY)
-        maxY = max(point.y, maxY)
-        stroke.append(point)
-    }
 
-    init(drawing: [[CGPoint]]) {
-        for stroke in drawing {
+    init(_ strokes: [[CGPoint]]) {
+        for stroke in strokes {
             for point in stroke {
                 addPoint(point)
             }
@@ -34,7 +27,15 @@ struct Drawing {
         }
     }
 
-    mutating func endStroke() {
+    mutating private func addPoint(_ point: CGPoint) {
+        minX = min(point.x, minX)
+        maxX = max(point.x, maxX)
+        minY = min(point.y, minY)
+        maxY = max(point.y, maxY)
+        stroke.append(point)
+    }
+
+    mutating private func endStroke() {
         drawing.append(stroke)
         stroke = []
     }

@@ -47,15 +47,11 @@ struct ActionButton: View {
 
     var body: some View {
         Button(
-            action: {
-                self.action()
-            },
+            action: self.action,
             label: {
                 Text(verbatim: type.title)
             }
         )
-        .frame(minWidth: 0, maxWidth: .infinity)
-        .padding()
         .foregroundColor(.white)
         .background(type.backgroundColor)
         .cornerRadius(12)

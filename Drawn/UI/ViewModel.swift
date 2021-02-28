@@ -25,9 +25,7 @@ class ViewModel: ObservableObject {
         $drawing
             .filter { $0 != [] }
             .throttle(for: 1, scheduler: DispatchQueue.global(), latest: true)
-            .sink { drawing in
-                self.predict(using: drawing)
-            }
+            .sink { self.predict(using: $0) }
             .store(in: &cancellables)
 
         $prediction
@@ -48,7 +46,7 @@ class ViewModel: ObservableObject {
     }
 
     func rememberDrawing() {
-        mlService.updateModel(image: Drawing(drawing: drawing).rasterized, classLabel: drawingTask)
+        mlService.updateModel(image: Drawing(drawing).rasterized, classLabel: drawingTask)
             .sink(
                 // TODO: Add error handling
                 receiveCompletion: { _ in },
@@ -63,14 +61,12 @@ class ViewModel: ObservableObject {
     }
 
     private func predict(using drawing: [[CGPoint]]) {
-        mlService.predict(image: Drawing(drawing: drawing).rasterized)
+        mlService.predict(image: Drawing(drawing).rasterized)
             .receive(on: RunLoop.main)
             .sink(
                 // TODO: Add error handling
                 receiveCompletion: { _ in },
-                receiveValue: { prediction in
-                    self.prediction = prediction
-                }
+                receiveValue: { self.prediction = $0 }
             )
             .store(in: &predictionCancellables)
     }
